@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gizemli Tablo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class = "game">
+    <div id="start-screen">
+    <header>
+        <h1> Kayıp Tablo </h1>
+        <span>Bir Dedektiflik Oyunu</span>
+    </header>
+
+    <main>
+        <section class ="case-info">
+        <h2>Kayıp Başyapıt </h2>
+        <p> 1.000.000 TL değerindeki "Gece Bahçesi" tablosu, gizemli bir şekilde kayboldu. </p>
+        <section class = "menu">
+            <h2>Oyun Hakkında</h2>
+            <p> Bu oyun, bir dedektif olarak kayıp tabloyu bulmak için ipuçlarını toplamanız ve şüphelileri sorgulamanız gereken bir maceradır. 
+                Olay yerini araştırın, şüphelileri sorgulayın ve ipuçlarını toplayarak tabloyu bulmaya çalışın.
+            </p>
+            <button onclick="startGame()">İlerle</button>
+        </section>
+    </main>
+    </div>
+    <section id = "game-screen">
+        <h1>Vaka İnceleme</h1>
+        <p>Tabloyu bulmak icin araştırmaya başlayın.</p>
+            <button onclick="investigateRoom()">Odayı Araştır </button>
+            <button onclick="showSuspects()">Şüphelileri Göster</button>
+            <button onclick="showClues()">Kanıtları İncele</button>
+
+            <div id ="suspect-list" >  
+                <h2>Şüpheli Listesi</h2>
+            <div class ="suspect">
+                    <h3>Ahmet</h3>
+                    <p>Galeri Sahibi</p>
+                    <button onclick="questionSuspect('Ahmet')">Sorgula</button>
+            </div>
+            <div class="suspect">
+                    <h3>Ayşe</h3>
+                    <p>Sanat Danışmanı</p>
+                    <button onclick="questionSuspect('Ayşe')">Sorgula</button>
+            </div>
+            <div class="suspect">
+                    <h3>Emre</h3>
+                    <p>Güvenlik Görevlisi</p>
+                    <button onclick="questionSuspect('Emre')">Sorgula</button>
+            </div>
+            <div class="suspect">
+                    <h3>Deniz</h3>
+                    <p>Temizlik Görevlisi</p>
+                    <button onclick="questionSuspect('Deniz')">Sorgula</button>
+            </div>
+            <div class="suspect">
+                    <h3>Mehmet</h3>
+                    <p>Koleksiyoner</p>
+                    <button onclick="questionSuspect('Mehmet')">Sorgula</button>
+            </div>
+        </div>
+
+<script src="script.js"></script>
+</body>
+</html>
